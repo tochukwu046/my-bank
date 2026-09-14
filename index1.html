@@ -1,0 +1,206 @@
+index1.html
+
+index.html
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northstar Bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style bank.css">
+</head>
+<body>
+
+  <!-- Main authenticated banking workspace. -->
+  <div class="app-shell">
+    <!-- Sidebar contains branding, navigation, profile, and logout. -->
+    <aside>
+      <div class="brand"><div class="brand-mark">F</div> FOSE BANK</div>
+      <div class="nav-label">Workspace</div>
+      <nav>
+        <button class="nav-link active" data-view="overview"><span class="icon">◉</span>Overview</button>
+        <button class="nav-link" data-view="payments"><span class="icon">↗</span>Payments</button>
+        <button class="nav-link" data-view="accounts"><span class="icon">▣</span>Accounts</button>
+        <button class="nav-link" data-view="cards"><span class="icon">▤</span>Cards</button>
+      </nav>
+      <div class="aside-bottom"><div class="profile"><div class="avatar">JD</div>
+      <div><strong>Jordan Davis</strong><span>Personal account</span></div></div>
+      <button class="logout-btn" id="logout-btn" type="button">Log out</button></div>
+    </aside>
+
+
+
+    <!-- Main dashboard content and account overview. -->
+    <main>
+      <!-- Header actions include notifications, theme switching, and transfers. -->
+      <header class="topbar">
+      <div><p class="eyebrow" id="page-kicker">Thursday, August 28, 2026</p>
+      <h1 id="page-title">Good morning, Big Sin</h1><p class="subtle">Here is what is happening with your money.</p></div>
+      <div class="top-actions"><button class="icon-btn" title="Notifications">♧</button>
+      <button class="icon-btn theme-toggle" id="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">☾</button>
+      <button class="primary-btn" id="open-transfer">Make a transfer</button></div></header>
+      <!-- Summary cards show balance, account metrics, and cash flow. -->
+      <section class="dashboard-grid">
+        <div class="balance-card">
+        <div class="card-top"><span>TOTAL BALANCE</span><span>••• 4821</span></div>
+        <div class="balance" id="total-balance">$24,680.00</div><div class="balance-meta"><span class="positive">↗ 4.8%</span>
+        <span>from last month</span></div></div>
+        <div class="mini-stats"><div class="stat">
+        <div class="stat-label">Income <span class="positive">↗</span></div>
+        <div class="stat-value">$8,420</div></div><div class="stat">
+        <div class="stat-label">Spent <span style="color:var(--coral)">↘</span></div>
+        <div class="stat-value">$3,180</div></div><div class="stat">
+        <div class="stat-label">Saved <span style="color:var(--teal)">↗</span></div>
+        <div class="stat-value">$1,240</div></div><div class="stat">
+        <div class="stat-label">Credit score <span>●</span></div>
+        <div class="stat-value">782</div></div></div>
+        <div class="insight-card">
+        <div class="insight-header"><span>Cash flow</span><strong>+ $3,280</strong></div>
+        <div class="sparkline" aria-hidden="true"><span style="height:20%"></span>
+        <span style="height:35%"></span><span style="height:42%"></span><span style="height:58%"></span>
+        <span style="height:62%"></span><span style="height:78%"></span><span style="height:96%"></span></div>
+        <div class="insight-footer"><small>Avg. monthly trend</small><span class="positive">+12.4%</span></div>
+        </div>
+      </section>
+
+
+
+
+      <!-- Activity history and common banking shortcuts. -->
+
+      <section class="content-grid">
+        <div class="panel"><div class="panel-head"><h2>Recent activity</h2>
+        <button id="all-activity">View all</button></div><div class="filter-row">
+        <input id="search" type="search" placeholder="Search transactions"></div><div id="transactions">
+        </div></div>
+        <div class="panel"><div class="panel-head"><h2>Shortcuts</h2></div>
+        <div class="quick-actions"><button class="quick" data-action="transfer">
+        <span class="quick-icon">↗</span><strong>Send money</strong><small>To a contact</small></button>
+        <button class="quick" data-action="deposit"><span class="quick-icon">＋</span><strong>Deposit check</strong>
+        <small>Mobile deposit</small></button><button class="quick" data-action="pay"><span class="quick-icon">▤</span>
+        <strong>Pay a bill</strong><small>Utilities and more</small></button>
+        <button class="quick" data-action="request"><span class="quick-icon">↓</span>
+        <strong>Request money</strong><small>Ask a contact</small></button></div>
+        <div class="progress-row"><div class="progress-title">
+        <strong>Vacation fund</strong><span>$3,400 of $5,000</span></div>
+        <div class="progress"><i></i></div></div><div class="category-panel">
+        <div class="panel-head compact"><h3>Monthly trends</h3>
+        <span class="tag">This month</span></div><div class="category-list">
+        <div class="category-item"><div class="category-row"><span>Housing</span>
+        <strong>$1,420</strong></div><div class="meter"><i style="width: 78%">
+        </i></div></div><div class="category-item">
+        <div class="category-row"><span>Food</span><strong>$680</strong></div>
+        <div class="meter"><i style="width: 48%"></i></div></div>
+        <div class="category-item"><div class="category-row">
+        <span>Travel</span><strong>$420</strong></div>
+        <div class="meter"><i style="width: 36%"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+</main>
+</div>
+
+
+
+  <!-- Shared action modal for transfers, deposits, payments, and requests. -->
+
+
+  <div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal"><div class="modal-head"><div>
+  <p class="eyebrow">Secure action</p><h2 id="modal-title">Make a transfer</h2></div>
+  <button id="close-modal" aria-label="Close">×</button></div>
+  <form id="action-form"><label>From account<select id="from-account"><option>Everyday Checking •• 4821</option>
+  <option>Savings •• 1098</option></select></label><label class="transfer-only">Transfer destination<select id="transfer-type">
+  <option value="local">Local transfer</option><option value="international">International transfer</option></select></label>
+  <label id="recipient-label">Full name<input id="recipient" required placeholder="Name or email"></label>
+  <label class="international-field" id="country-field">Country<select id="country"><option value="Canada">Canada</option>
+  <option value="United Kingdom">United Kingdom</option><option value="Australia">Australia</option>
+  <option value="Germany">Germany</option><option value="Japan">Japan</option></select></label>
+  <label class="local-field" id="account-number-field">Account number<input id="account-number" placeholder="Recipient account number"></label>
+  <label class="local-field" id="bank-name-field">Bank name<input id="bank-name" placeholder="Recipient bank"></label>
+  <label class="international-bank-field">Bank address<input id="bank-address" placeholder="Street, city, state or province"></label>
+  <label class="international-bank-field">IBAN number<input id="iban" placeholder="International Bank Account Number"></label>
+  <label class="international-bank-field">SWIFT number<input id="swift" placeholder="Bank SWIFT/BIC code"></label>
+  <label>Amount<input id="amount" type="number" min="1" step="0.01" required placeholder="$0.00"></label>
+  <label class="transfer-only">Transfer PIN<input id="transfer-pin" type="password" inputmode="numeric" maxlength="4" pattern="[0-9]{4}" placeholder="Enter your 4-digit PIN" autocomplete="off"></label>
+  <p class="form-error" id="transfer-error" role="alert"></p>
+  <div class="form-actions"><button type="button" class="ghost-btn" id="cancel-modal">Cancel</button>
+  <button class="primary-btn" type="submit">Confirm action</button></div></form>
+  </div>
+</div>
+  <!-- Receipt modal displays details for a selected transaction. -->
+
+
+  <div class="modal-backdrop" id="receipt-backdrop"><div class="modal"><div class="modal-head">
+  <div><p class="eyebrow">FOSE BANK</p><h2>Transaction receipt</h2></div><button id="close-receipt" aria-label="Close">×</button></div>
+  <div id="receipt-content"></div><div class="form-actions">
+  <button type="button" class="primary-btn" id="done-receipt">Done</button>
+</div>
+</div>
+</div>
+
+
+  <!-- Confirmation modal prevents accidental transfer submission. -->
+
+
+  <div class="modal-backdrop" id="confirm-backdrop"><div class="modal"><div class="modal-head">
+  <div><p class="eyebrow">Review transfer</p><h2>Confirm before sending</h2></div>
+  <button id="close-confirm" aria-label="Close">×</button></div><div id="confirm-content"></div>
+  <div class="form-actions"><button type="button" class="ghost-btn" id="cancel-confirm">Cancel</button>
+  <button type="button" class="primary-btn" id="confirm-send">Confirm send</button></div></div></div>
+  <div class="toast" id="toast"></div>
+  
+
+
+	<!-- Standalone authentication screen for the demo bank account. -->
+	<main class="auth-page">
+		<!-- Login card keeps the form focused and centered on every screen size. -->
+		<section class="auth-card" aria-labelledby="login-title">
+			<!-- Brand identity shared with the dashboard. -->
+			<div class="auth-brand">
+				<div class="brand-mark">F</div>
+				<span>FOSE BANK</span>
+			</div>
+
+			<!-- Introductory heading for the sign-in form. -->
+			<div class="auth-header">
+				<p class="eyebrow">Welcome back</p>
+				<h1 id="login-title">Sign in</h1>
+			</div>
+
+			<!-- JavaScript validates this form and redirects to the dashboard. -->
+			<form id="login-form" class="login-form">
+				<label for="login-email">Email or username
+					<input id="login-email" name="email" type="text" autocomplete="username" placeholder="you@example.com" required>
+				</label>
+
+				<label for="login-password">Password
+					<input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+				</label>
+
+				<!-- Credentials are displayed because this is a front-end demo only. -->
+				<p class="demo-credentials">Demo account: nnamanigideon6@gmail.com / big1244</p>
+
+				<button type="submit" class="primary-btn login-submit">Sign in</button>
+			</form>
+		</section>
+	</main>
+
+	<!-- The shared script also contains page-aware dashboard and auth logic. -->
+	<script src="script.js?v=2"></script>
+</body>
+</html>
+
+  
+  <!-- Shared dashboard behavior and state management. -->
+  <script src="script.js?v=4"></script>
+</body>
+</html>
